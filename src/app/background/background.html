@@ -1,0 +1,19 @@
+<div class="bg">
+  <!-- PURPLE GRADIENT CIRCLE -->
+  <div class="circle purple-circle"></div>
+
+  <!-- CYAN GRADIENT CIRCLE -->
+  <div class="circle cyan-circle"></div>
+
+  <!-- SMALL FLOATING DOTS (TWO COLORS) -->
+  <span
+    *ngFor="let d of dots; let i = index"
+    class="dot"
+    [class.dot-cyan]="i % 2 === 0"
+    [class.dot-purple]="i % 2 !== 0"
+    [style.left]="(i * 9) % 100 + '%'"
+    [style.top]="(i * 13) % 100 + '%'"
+    [style.animationDelay]="i * 0.5 + 's'"
+  ></span>
+
+</div>

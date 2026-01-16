@@ -1,0 +1,58 @@
+<section class="experience-section" id="experience" appReveal [revealDelay]="80">
+
+  <h2 class="title">
+    Experience & <span>Certifications</span>
+  </h2>
+
+  <p class="subtitle">
+    My professional journey and achievements
+  </p>
+
+  <div class="content">
+
+    <!-- WORK EXPERIENCE -->
+    <div class="work">
+
+      <h3 class="section-title">💼 Work Experience</h3>
+
+      <div class="timeline">
+
+        <div class="timeline-item" *ngFor="let exp of experiences">
+          <span class="dot"></span>
+
+          <div class="card">
+            <div class="card-header">
+              <h4>{{ exp.company }}</h4>
+              <span class="period">{{ exp.period }}</span>
+            </div>
+
+            <p class="role">{{ exp.role }}</p>
+            <p class="desc">{{ exp.description }}</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="certifications">
+
+      <h3 class="section-title">🏅 Certifications</h3>
+
+      <div class="cert-grid">
+        <div class="cert-card" *ngFor="let cert of certifications">
+          ✔ {{ cert }}
+        </div>
+      </div>
+
+      <div class="cert-info">
+        Continuously learning and growing with industry-recognized
+        certifications from leading tech companies.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,208 @@
+/* ================= SECTION ================= */
+.experience-section {
+  min-height: 100vh;
+  padding: 140px 80px;
+  color: #fff;
+}
+
+/* ================= TITLE ================= */
+.title {
+  text-align: center;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+}
+
+.title span {
+  background: linear-gradient(
+    105deg,
+    hsl(190, 100%, 50%),
+    hsl(330, 80%, 60%)
+  );
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 40px hsla(190, 100%, 50%, 0.3);
+}
+
+
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  font-size: clamp(15px, 2vw, 18px);
+  margin-bottom: 90px;
+}
+
+/* ================= LAYOUT ================= */
+.content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 6px;
+}
+
+/* ================= SECTION TITLE ================= */
+.section-title {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+/* ================= TIMELINE ================= */
+.timeline {
+  position: relative;
+  padding-left: 35px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(#3bf0ff, transparent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item .dot {
+  position: absolute;
+  left: -20px;
+  top: 22px;
+  width: 14px;
+  height: 14px;
+  background: #3bf0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #3bf0ff;
+}
+
+/* ================= EXPERIENCE CARD ================= */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(18px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.card-header h4 {
+  font-size: 18px;
+}
+
+.period {
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(59,240,255,0.15);
+  color: #3bf0ff;
+}
+
+.role {
+  color: #a855f7;
+  margin-bottom: 10px;
+}
+
+.desc {
+  color: #b5b5b5;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================= CERTIFICATIONS ================= */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-left: 12px;
+  margin-bottom: 26px;
+}
+
+.cert-card {
+  padding: 14px;
+  text-align: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #3bf0ff;
+}
+
+.cert-info {
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  padding: 22px;
+  color: #9ca3af;
+  font-size: 15px;
+  margin-left: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.cert-card {
+  padding: 14px;
+  text-align: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #3bf0ff;
+
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+/* Hover (desktop) */
+@media (hover: hover) {
+  .cert-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(59,240,255,0.55);
+    background: rgba(59,240,255,0.10);
+    box-shadow: 0 0 28px rgba(59,240,255,0.35);
+  }
+}
+
+/* Tap feedback (mobile) */
+.cert-card:active {
+  transform: scale(0.98);
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 120px 40px;
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 100px 20px;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+}

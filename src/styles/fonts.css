@@ -1,0 +1,31 @@
+/* ===== Inter (Variable) ===== */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("/assets/fonts/Inter-Variable.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ===== Orbitron (3 weights) ===== */
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/Orbitron-500.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/Orbitron-600.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Orbitron-700.woff2") format("woff2");
+  font-display: swap;
+}

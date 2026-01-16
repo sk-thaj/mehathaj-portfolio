@@ -1,0 +1,106 @@
+/* ===============================
+   FULL SCREEN BASE
+================================ */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: #05060f;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* ===============================
+   COMMON CIRCLE STYLE
+================================ */
+.circle {
+  position: absolute;
+  top: 50%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(110px);
+  opacity: 0.85;
+}
+
+/* ===============================
+   PURPLE CIRCLE (LEFT SIDE)
+================================ */
+.purple-circle {
+  left: 30%; /* clearly left */
+
+  transform: translateY(-50%);
+
+  background: radial-gradient(
+    circle,
+    rgba(168, 85, 247, 0.6) 0%,
+    rgba(168, 85, 247, 0.35) 40%,
+    rgba(168, 85, 247, 0.15) 65%,
+    transparent 75%
+  );
+}
+
+/* ===============================
+   CYAN CIRCLE (RIGHT SIDE)
+================================ */
+.cyan-circle {
+  left: 65%; /* clearly right */
+
+  transform: translateY(-50%);
+
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.55) 0%,
+    rgba(56, 189, 248, 0.30) 40%,
+    rgba(56, 189, 248, 0.12) 65%,
+    transparent 75%
+  );
+}
+
+/* ===============================
+   SMALL DOTS (TWO COLORS)
+================================ */
+.dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  opacity: 0.55;
+  pointer-events: none;
+
+  animation: floatSlow 18s ease-in-out infinite;
+}
+
+/* CYAN DOT */
+.dot-cyan {
+  background: #38bdf8;
+  box-shadow:
+    0 0 4px rgba(168, 85, 247, 0.8),
+    0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+/* PURPLE DOT */
+.dot-purple {
+  background: #a855f7;
+  box-shadow:
+    0 0 4px rgba(56, 189, 248, 0.8),
+    0 0 8px rgba(168, 85, 247, 0.4);
+}
+
+/* ===============================
+   DOT FLOAT (VERY SLOW)
+================================ */
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-45px);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.25;
+  }
+}

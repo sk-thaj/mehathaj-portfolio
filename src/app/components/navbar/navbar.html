@@ -1,0 +1,36 @@
+<header class="navbar" [class.scrolled]="isScrolled">
+
+  <!-- LOGO -->
+  <div class="logo" (click)="scrollTo('home')">SM</div>
+
+  <!-- DESKTOP MENU -->
+  <ul class="nav-links desktop">
+    <li
+      *ngFor="let item of navItems"
+      [class.active]="activeSection === item.id"
+      (click)="scrollTo(item.id)"
+    >
+      {{ item.name }}
+    </li>
+  </ul>
+
+  <!-- HAMBURGER -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</header>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" [class.open]="isMenuOpen">
+  <ul>
+    <li
+      *ngFor="let item of navItems"
+      (click)="scrollTo(item.id)"
+    >
+      {{ item.name }}
+    </li>
+  </ul>
+</nav>

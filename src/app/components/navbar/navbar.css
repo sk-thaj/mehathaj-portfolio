@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter...');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: 0.4s ease;
+  background: radial-gradient(circle at 40% 40%, #2a1458, #000);
+}
+
+/* Scroll Effect */
+.navbar.scrolled {
+  background: rgba(11, 18, 32, 0.65);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ================= LOGO ================= */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3bf0ff;
+  cursor: pointer;
+}
+
+/* ================= DESKTOP LINKS ================= */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.nav-links li {
+  font-size: 15px;
+  color: #9ca3af;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links li:hover {
+  color: #3bf0ff;
+}
+
+/* Active underline */
+.nav-links li.active {
+  color: #3bf0ff;
+}
+
+.nav-links li.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3bf0ff, #a855f7);
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #3bf0ff;
+  border-radius: 4px;
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: transparent;
+  backdrop-filter: blur(20px);
+  transform: translateY(-100%);
+  transition: 0.4s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.mobile-menu li {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

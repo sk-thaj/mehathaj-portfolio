@@ -1,0 +1,152 @@
+/* ================= SECTION ================= */
+.projects-section {
+  min-height: 100vh;
+  padding: 140px 80px;
+  color: #fff;
+  text-align: center;
+}
+
+/* ================= TITLE ================= */
+.title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.title span {
+  background: linear-gradient(
+    105deg,
+    hsl(190, 100%, 50%),
+    hsl(330, 80%, 60%)
+  );
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 40px hsla(190, 100%, 50%, 0.3);
+}
+
+
+/* ================= SUBTITLE ================= */
+.subtitle {
+  color: #9ca3af;
+  font-size: clamp(15px, 2vw, 18px);
+  margin-bottom: 80px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= GRID ================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* ================= CARD ================= */
+.project-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #3bf0ff;
+  box-shadow: 0 0 35px rgba(59,240,255,0.25);
+}
+
+/* ================= TOP ================= */
+.card-top {
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-top .icon {
+  font-size: 48px;
+}
+
+/* Gradients */
+.card-top.blue {
+  background: linear-gradient(135deg, #1e90ff, #3a1c71);
+}
+
+.card-top.purple {
+  background: linear-gradient(135deg, #7c3aed, #3a1c71);
+}
+
+.card-top.teal {
+  background: linear-gradient(135deg, #14b8a6, #3a1c71);
+}
+
+/* ================= CONTENT ================= */
+.card-content {
+  padding: 28px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  font-size: 15px;
+  color: #b5b5b5;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ================= TECH ================= */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #3bf0ff;
+  background: rgba(59,240,255,0.1);
+  border: 1px solid rgba(59,240,255,0.3);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Laptops */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 120px 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 100px 20px;
+  }
+
+  .card-top {
+    height: 140px;
+  }
+}

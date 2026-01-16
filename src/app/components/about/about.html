@@ -1,0 +1,25 @@
+<section class="about-section" id="about" appReveal [revealDelay]="0">
+
+  <h2 class="title">
+    About <span>Me</span>
+  </h2>
+
+  <p class="subtitle">
+    A passionate developer dedicated to creating exceptional digital experiences
+  </p>
+
+  <div class="cards">
+
+    <div class="card" *ngFor="let card of cards">
+      <div class="icon">
+        {{ card.icon }}
+      </div>
+
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
+    </div>
+
+  </div>
+
+
+</section>

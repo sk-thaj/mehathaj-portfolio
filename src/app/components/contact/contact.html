@@ -1,0 +1,179 @@
+<section class="contact-section" id="contact" appReveal [revealDelay]="80">
+
+  <h2 class="title">
+    Get In <span>Touch</span>
+  </h2>
+
+  <p class="subtitle">
+    Have a project in mind or just want to say hello? Feel free to reach out!
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- LEFT : CONTACT FORM -->
+    <form class="contact-form" #f="ngForm" (ngSubmit)="submitForm(f)">
+
+  <label>Name</label>
+  <input
+    type="text"
+    name="name"
+    placeholder="Your name"
+    [(ngModel)]="contact.name"
+    required
+    #name="ngModel"
+  />
+  <small class="field-error" *ngIf="(submitted || name.touched) && name.invalid">
+    Please enter your name
+  </small>
+
+  <label>Email</label>
+  <input
+    type="email"
+    name="email"
+    placeholder="your@email.com"
+    [(ngModel)]="contact.email"
+    required
+    email
+    #email="ngModel"
+  />
+  <small class="field-error" *ngIf="(submitted || email.touched) && email.invalid">
+    Please enter a valid email
+  </small>
+
+  <label>Message</label>
+  <textarea
+    rows="5"
+    name="message"
+    placeholder="Your message..."
+    [(ngModel)]="contact.message"
+    required
+    minlength="5"
+    #message="ngModel"
+  ></textarea>
+  <small class="field-error" *ngIf="(submitted || message.touched) && message.invalid">
+    Please enter your message more than 2 letters
+    </small>
+
+  <!-- GLOBAL MSG -->
+  <p class="form-msg error" *ngIf="errorMsg">{{ errorMsg }}</p>
+  <p class="form-msg success" *ngIf="successMsg">{{ successMsg }}</p>
+
+  <button type="submit" [disabled]="loading">
+    <span *ngIf="!loading">Send Message</span>
+    <span *ngIf="loading">Sending...</span>
+  </button>
+
+</form>
+
+    <!-- RIGHT : CONTACT INFO + SOCIAL -->
+    <div class="contact-info">
+
+      <!-- CONTACT INFO CARD -->
+      <div class="info-card">
+        <h3>Contact Info</h3>
+
+        <div class="info-item">
+          <!-- EMAIL -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M22 6l-10 7L2 6"/>
+          </svg>
+          <span>shaikmehathaj37@gmail.com</span>
+        </div>
+
+        <div class="info-item">
+          <!-- LOCATION -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 21s-6-5.5-6-10a6 6 0 1 1 12 0c0 4.5-6 10-6 10z"/>
+            <circle cx="12" cy="11" r="2"/>
+          </svg>
+          <span>India</span>
+        </div>
+
+        <div class="info-item">
+          <!-- PHONE -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+            19.86 19.86 0 0 1-8.63-3.07
+            19.5 19.5 0 0 1-6-6
+            19.86 19.86 0 0 1-3.07-8.67
+            A2 2 0 0 1 4.11 2h3
+            a2 2 0 0 1 2 1.72
+            c.12.9.32 1.77.57 2.6
+            a2 2 0 0 1-.45 2.11L8.09 9.91
+            a16 16 0 0 0 6 6l1.48-1.48
+            a2 2 0 0 1 2.11-.45
+            c.83.25 1.7.45 2.6.57
+            a2 2 0 0 1 1.72 2z"/>
+          </svg>
+          <span>Available on request</span>
+        </div>
+      </div>
+
+      <!-- SOCIAL CONNECT CARD -->
+      <div class="social-card">
+        <h3>Connect With Me</h3>
+
+        <div class="social-icons">
+
+          <!-- GitHub -->
+          <a href="https://github.com/sk-thaj"
+             target="_blank"
+             class="icon-box cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 
+              2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.69
+              c-2.78.6-3.37-1.17-3.37-1.17-.45-1.13-1.1-1.43
+              -1.1-1.43-.9-.62.07-.61.07-.61 1 .07 1.52
+              1.03 1.52 1.03.89 1.52 2.34 1.08 2.91.83
+              .09-.64.35-1.08.64-1.33-2.22-.25-4.56
+              -1.11-4.56-4.94 0-1.09.39-1.98 1.03
+              -2.68-.1-.25-.45-1.27.1-2.65 0 0 .84
+              -.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.9
+              -1.29 2.74-1.02 2.74-1.02.55 1.38.2
+              2.4.1 2.65.64.7 1.02 1.59 1.02 2.68
+              0 3.84-2.34 4.68-4.57 4.93.36.31.68
+              .92.68 1.85v2.75c0 .26.16.57.67.47A10
+              .01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/>
+          </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/shaik-mehathaj"
+             target="_blank"
+             class="icon-box purple">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.8 0-5 2.2-5 5v14
+              c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2
+              5-5v-14c0-2.8-2.2-5-5-5zM7.1
+              20h-3v-11h3v11zM5.6 7.7c-1
+              0-1.8-.8-1.8-1.8s.8-1.8
+              1.8-1.8 1.8.8 1.8
+              1.8-.8 1.8-1.8
+              1.8zM20 20h-3v-5.6c0
+              -1.3 0-3-1.8-3s-2.1
+              1.4-2.1 2.9v5.7h
+              -3v-11h2.9v1.5h.1
+              c.4-.8 1.4-1.6 2.9
+              -1.6 3.1 0 3.7 2
+              3.7 4.6v6.5z"/>
+          </svg>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:shaikmehathaj37@gmail.com"
+             class="icon-box cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M22 6l-10 7L2 6"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

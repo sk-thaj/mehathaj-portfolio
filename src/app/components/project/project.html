@@ -1,0 +1,36 @@
+<section class="projects-section" id="project" appReveal [revealDelay]="150">
+
+  <h2 class="title">
+    <span>Projects</span>
+  </h2>
+
+  <p class="subtitle">
+    A collection of projects that showcase my skills and passion for development
+  </p>
+
+  <div class="projects-grid">
+
+    <div class="project-card" *ngFor="let project of projects">
+
+      <!-- TOP GRADIENT -->
+      <div class="card-top" [ngClass]="project.gradient">
+        <img class="project-img" [src]="project.image" [alt]="project.title" />
+      </div>
+
+      <!-- CONTENT -->
+      <div class="card-content">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+
+        <div class="tech-stack">
+          <span class="chip" *ngFor="let t of project.tech">
+            {{ t }}
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  
+</section>

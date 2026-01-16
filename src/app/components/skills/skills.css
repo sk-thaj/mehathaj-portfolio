@@ -1,0 +1,152 @@
+/* ================= SECTION ================= */
+.skills-section {
+  padding: 140px 80px;
+  
+}
+
+.skills-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 46px);
+  margin-bottom: 80px;
+  background: linear-gradient(
+    180deg,
+    hsl(190, 100%, 50%),
+    hsl(330, 80%, 60%)
+  );
+  font-family: 'Orbitron', sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 40px hsla(190, 100%, 50%, 0.3);
+  
+}
+
+/* ================= STATIC CARDS ================= */
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 90px;
+  color: #fff;
+}
+
+.skill-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+  padding: 28px;
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(59,240,255,0.35);
+  border-color: rgba(59,240,255,0.4);
+}
+
+.skill-card h3 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+/* ================= CARD SKILLS (FIX HERE) ================= */
+.card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card-skills span {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  font-size: 14px;
+  white-space: nowrap;
+  color: #cbd5f5;
+}
+
+/* ================= MOVING STRIP ================= */
+.skill-strip {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  max-width: 420px; /* only 3–4 skills visible */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* fade edges */
+.skill-strip::before,
+.skill-strip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.skill-strip::before {
+  left: 0;
+}
+
+.skill-strip::after {
+  right: 0;
+
+}
+
+/* ================= TRACK ================= */
+.track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  align-items: center;
+
+  /* true endless marquee */
+  animation: marquee 16s linear infinite;
+}
+
+/* MOVING STRIP PILLS */
+.track span {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  font-size: 14px;
+  white-space: nowrap;
+  color: #cbd5f5;
+}
+
+/* ================= TRUE ENDLESS ANIMATION ================= */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 120px 24px;
+  }
+
+  .skills-cards {
+    margin-bottom: 60px;
+  }
+
+  .skill-strip {
+    max-width: 300px;
+  }
+
+ 
+}
