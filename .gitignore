@@ -55,4 +55,4 @@ Thumbs.db
 .env.production.local
 
 # Hide Contact Component
-src/app/contact/contact.ts
+src/app/contact/
