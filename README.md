@@ -1,59 +1,154 @@
-# MehathajPortfolio
+# Mehathaj Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+This is a personal **developer portfolio website** created by **Shaik Mehathaj** using **Angular**.
+The portfolio highlights projects, skills, and information about the developer.
 
-## Development server
+The project follows a **component-based architecture** and is built using **Angular CLI**.
 
-To start a local development server, run:
+---
 
-```bash
+# Developer
+
+**Shaik Mehathaj**
+
+
+---
+
+# Features
+
+* Modern Angular portfolio website
+* Responsive user interface
+* Sections for Home, About, Projects, and Contact
+* Clean component-based architecture
+* Easy to customize and extend
+
+---
+
+# Application Screenshot
+
+## Home Page
+
+<p align="center">
+<img src="public/image.png" width="800"/>
+</p>
+
+---
+
+# Technologies Used
+
+* Angular
+* TypeScript
+* HTML
+* CSS
+* Node.js
+* Angular CLI
+
+---
+
+# How to Run This Project
+
+Follow the steps below to run this project on your computer.
+
+---
+
+## 1.Clone the Repository
+
+Open your terminal and run:
+
+git clone https://github.com/sk-thaj/mehathaj-portfolio.git
+
+---
+
+## 2️.Navigate to the Project Folder
+
+cd mehathaj-portfolio
+
+---
+
+## 3️.Install Dependencies
+
+Make sure **Node.js** and **Angular CLI** are installed.
+
+Then run:
+
+npm install
+
+---
+
+## 4️.Start the Development Server
+
+Run the following command:
+
 ng serve
+
+---
+
+## 5️.Open the Application
+
+Open your browser and go to:
+
+http://localhost:4200/
+
+The application will automatically reload when you modify any source files.
+
+---
+
+# Important Note
+
+Some files are intentionally **not included in this repository**:
+
+* `src/app/components/contact/contact.ts`
+* `google-fonts-main.zip`
+
+These files were excluded to avoid publishing **large files and personal contact information** in the public repository.
+
+---
+
+# Adding the Contact Component (Optional)
+
+If you want to recreate the contact component, run:
+
+ng generate component contact
+
+This will generate:
+
+src/app/components/contact/contact.ts
+src/app/components/contact/contact.html
+src/app/components/contact/contact.css
+
+You can then customize the component as needed.
+
+---
+
+# Project Structure
+
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+mehathaj-portfolio
+│
+├── screenshots
+│   └── home.png
+│
+├── src
+│   ├── app
+│   │   ├── components
+│   │   │   ├── home
+│   │   │   ├── about
+│   │   │   ├── projects
+│   │   │   └── contact
+│   │
+│   ├── assets
+│   └── index.html
+│
+├── package.json
+├── angular.json
+└── README.md
 ```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+# Support
 
-```bash
-ng generate --help
-```
+If you like this project, please consider **starring the repository on GitHub**.
 
-## Building
+---
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+© 2025 Developed by **Shaik Mehathaj**
