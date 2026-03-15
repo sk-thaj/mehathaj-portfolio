@@ -57,3 +57,4 @@ Thumbs.db
 # Hide Contact Component
 src/app/components/contact/contact.ts
 google-fonts-main.zip
+*.zip
