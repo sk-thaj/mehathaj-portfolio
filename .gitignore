@@ -1,4 +1,4 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files
 
 # Compiled output
 /dist
@@ -6,10 +6,16 @@
 /out-tsc
 /bazel-out
 
-# Node
+# Angular build cache
+/.angular/cache
+
+# Node modules
 /node_modules
+
+# Logs
 npm-debug.log
 yarn-error.log
+pnpm-debug.log
 
 # IDEs and editors
 .idea/
@@ -29,7 +35,6 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
@@ -42,5 +47,12 @@ __screenshots__/
 .DS_Store
 Thumbs.db
 
-# Hide contact file
-src/pages/contact.tsx
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Hide Contact Component
+src/app/contact/contact.ts
